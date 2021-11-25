@@ -41,7 +41,7 @@ const App = () => {
             <label>Place</label>
             <h4 className="place">Johnson St. Bridge</h4>
             <label>Review</label>
-            <p>Cool bridge</p>
+            <p className="desc">Cool bridge</p>
             <label>Rating</label>
             <div className="stars">
               <Star />

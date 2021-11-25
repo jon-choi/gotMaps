@@ -13,3 +13,7 @@ label {
   border-bottom: 0.5px solid tomato;
   margin: 3px 0;
 }
+
+.desc {
+  font-size: 14px;
+}
