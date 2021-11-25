@@ -44,11 +44,11 @@ const App = () => {
             <p className="desc">Cool bridge</p>
             <label>Rating</label>
             <div className="stars">
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
+              <Star className="star" />
+              <Star className="star" />
+              <Star className="star" />
+              <Star className="star" />
+              <Star className="star" />
             </div>
             <label>Info</label>
             <span className="username">
