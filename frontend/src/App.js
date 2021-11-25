@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { Room, Star } from "@material-ui/icons";
+import "./app.css";
 
 const App = () => {
   const [viewport, setViewport] = useState({
