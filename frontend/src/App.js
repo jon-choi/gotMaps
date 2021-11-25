@@ -4,6 +4,7 @@ import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { Room, Star } from "@material-ui/icons";
 import "./app.css";
 import axios from "axios";
+import { format } from "timeago.js";
 
 const App = () => {
   const [pins, setPins] = useState([]);
@@ -48,8 +49,8 @@ const App = () => {
               />
             </Marker>
             <Popup
-              latitude={48.428293}
-              longitude={-123.372001}
+              latitude={p.lat}
+              longitude={p.long}
               closeButton={true}
               closeOnClick={false}
               // onClose={() => togglePopup(false)}
@@ -57,9 +58,9 @@ const App = () => {
             >
               <div className="card">
                 <label>Place</label>
-                <h4 className="place">Johnson St. Bridge</h4>
+                <h4 className="place">{p.title}</h4>
                 <label>Review</label>
-                <p className="desc">Cool bridge</p>
+                <p className="desc">{p.desc}</p>
                 <label>Rating</label>
                 <div className="stars">
                   <Star className="star" />
@@ -70,9 +71,9 @@ const App = () => {
                 </div>
                 <label>Info</label>
                 <span className="username">
-                  Created by <b>Jon </b>
+                  Created by <b>{p.username}</b>
                 </span>
-                <span className="date">5 minutes ago</span>
+                <span className="date">{format(p.createdAt)}</span>
               </div>
             </Popup>
           </>
