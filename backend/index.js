@@ -22,5 +22,5 @@ mongoose
 app.use("/api/pins", pinRoute);
 
 app.listen(8800, () => {
-  console.log("backend server is running!");
+  console.log("backend server is running on Port: 8800!");
 });
