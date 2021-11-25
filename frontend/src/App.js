@@ -18,14 +18,15 @@ const App = () => {
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        mapStyle="mapbox://styles/choisya/ckwfak77lkkt814uq325449vu"
       >
         <Marker
-          latitude={48.428244}
-          longitude={-123.371967}
+          latitude={48.428293}
+          longitude={-123.372001}
           offsetLeft={-20}
-          offsetTop={-10}
+          offsetTop={-60}
         >
-          <Room />
+          <Room style={{ fontSize: viewport.zoom * 3, color: "slateblue" }} />
         </Marker>
       </ReactMapGL>
     </div>
