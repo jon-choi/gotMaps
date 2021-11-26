@@ -8,6 +8,7 @@ import { format } from "timeago.js";
 
 const App = () => {
   const [pins, setPins] = useState([]);
+  const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -15,6 +16,11 @@ const App = () => {
     longitude: -123.3656,
     zoom: 12,
   });
+
+  const handleMarkerClick = (id, lat, long) => {
+    setCurrentPlaceId(id);
+    setViewport({ ...viewport, latitude: lat, longitude: long });
+  };
 
   useEffect(() => {
     const getPins = async () => {
@@ -46,6 +52,7 @@ const App = () => {
             >
               <Room
                 style={{ fontSize: viewport.zoom * 3, color: "slateblue" }}
+                onClick={() => handleMarkerClick(p._id, p.lat, p.long)}
               />
             </Marker>
             <Popup
