@@ -77,7 +77,6 @@ const App = () => {
                 longitude={p.long}
                 closeButton={true}
                 closeOnClick={false}
-                // onClose={() => togglePopup(false)}
                 anchor="left"
                 onClose={() => setCurrentPlaceId(null)}
               >
@@ -110,7 +109,6 @@ const App = () => {
             longitude={newPlace.long}
             closeButton={true}
             closeOnClick={false}
-            // onClose={() => togglePopup(false)}
             anchor="left"
             onClose={() => setNewPlace(null)}
           >

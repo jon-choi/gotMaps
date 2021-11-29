@@ -38,7 +38,21 @@ form {
   justify-content: space-between;
 }
 
-input {
+input, textarea {
   border: none;
   border-bottom: 1px solid gray;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 12px;
+  color: rgb(185, 185, 185);
+}
+
+.submitButton {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: tomato;
+  cursor: pointer;
 }
