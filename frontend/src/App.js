@@ -52,6 +52,7 @@ const App = () => {
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/choisya/ckwfak77lkkt814uq325449vu"
         onDblClick={handleAddClick}
+        transitionDuration="200"
       >
         {pins.map((p) => (
           <>
