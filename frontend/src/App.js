@@ -82,12 +82,12 @@ const App = () => {
             <Marker
               latitude={p.lat}
               longitude={p.long}
-              offsetLeft={-20}
-              offsetTop={-10}
+              offsetLeft={-viewport.zoom * 3.5}
+              offsetTop={-viewport.zoom * 7}
             >
               <Room
                 style={{
-                  fontSize: viewport.zoom * 3,
+                  fontSize: viewport.zoom * 7,
                   color: p.username === currentUser ? "tomato" : "slateblue",
                   cursor: "pointer",
                 }}
