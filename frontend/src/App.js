@@ -110,11 +110,7 @@ const App = () => {
                   <p className="desc">{p.desc}</p>
                   <label>Rating</label>
                   <div className="stars">
-                    <Star className="star" />
-                    <Star className="star" />
-                    <Star className="star" />
-                    <Star className="star" />
-                    <Star className="star" />
+                    {Array(p.rating).fill(<Star className="star" />)}
                   </div>
                   <label>Info</label>
                   <span className="username">
