@@ -115,22 +115,24 @@ const App = () => {
             onClose={() => setNewPlace(null)}
           >
             <div>
-              <label>Title</label>
-              <input placeholder="Enter a title" />
-              <label>Review</label>
-              <textarea placeholder="Enter a description" />
-              <label>Rating</label>
-              <select>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
+              <form>
+                <label>Title</label>
+                <input placeholder="Enter a title" />
+                <label>Review</label>
+                <textarea placeholder="Enter a description" />
+                <label>Rating</label>
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
 
-              <button className="submitButton" type="submit">
-                Add Pin
-              </button>
+                <button className="submitButton" type="submit">
+                  Add Pin
+                </button>
+              </form>
             </div>
           </Popup>
         )}
