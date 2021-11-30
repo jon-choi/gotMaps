@@ -74,6 +74,11 @@ const App = () => {
     }
   };
 
+  const handleLogout = () => {
+    setCurrentUsername(null);
+    myStorage.removeItem("user");
+  };
+
   return (
     <div className="App">
       <ReactMapGL
@@ -168,7 +173,9 @@ const App = () => {
           </Popup>
         )}
         {currentUsername ? (
-          <button className="button logout">Log Out</button>
+          <button className="button logout" onClick={handleLogout}>
+            Log Out
+          </button>
         ) : (
           <div className="buttons">
             <button className="button login" onClick={() => setShowLogin(true)}>
