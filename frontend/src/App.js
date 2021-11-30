@@ -7,7 +7,7 @@ import axios from "axios";
 import { format } from "timeago.js";
 
 const App = () => {
-  const currentUser = "Jane";
+  const [currentUsername, setCurrentUsername] = useState(null);
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
@@ -50,7 +50,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPin = {
-      username: currentUser,
+      username: currentUsername,
       title,
       desc,
       rating: star,
@@ -88,7 +88,8 @@ const App = () => {
               <Room
                 style={{
                   fontSize: viewport.zoom * 3,
-                  color: p.username === currentUser ? "tomato" : "slateblue",
+                  color:
+                    p.username === currentUsername ? "tomato" : "slateblue",
                   cursor: "pointer",
                 }}
                 onClick={() => handleMarkerClick(p._id, p.lat, p.long)}
@@ -159,7 +160,7 @@ const App = () => {
             </div>
           </Popup>
         )}
-        {currentUser ? (
+        {currentUsername ? (
           <button className="button logout">Log Out</button>
         ) : (
           <div className="buttons">
