@@ -9,7 +9,10 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 const App = () => {
-  const [currentUsername, setCurrentUsername] = useState(null);
+  const myStorage = window.localStorage;
+  const [currentUsername, setCurrentUsername] = useState(
+    myStorage.getItem("user")
+  );
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
@@ -180,7 +183,13 @@ const App = () => {
           </div>
         )}
         {showRegister && <Register setShowRegister={setShowRegister} />}
-        {showLogin && <Login setShowLogin={setShowLogin} />}
+        {showLogin && (
+          <Login
+            setShowLogin={setShowLogin}
+            myStorage={myStorage}
+            setCurrentUsername={setCurrentUsername}
+          />
+        )}
       </ReactMapGL>
     </div>
   );
