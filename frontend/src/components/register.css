@@ -30,6 +30,7 @@
   color: white;
   background-color: slateblue;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .success {
@@ -42,4 +43,11 @@
   color: red;
   font-size: 12px;
   text-align: center;
+}
+
+.registerCancel {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
 }
