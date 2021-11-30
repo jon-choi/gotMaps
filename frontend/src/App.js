@@ -5,6 +5,7 @@ import { Room, Star } from "@material-ui/icons";
 import "./app.css";
 import axios from "axios";
 import { format } from "timeago.js";
+import Register from "./components/Register";
 
 const App = () => {
   const [currentUsername, setCurrentUsername] = useState(null);
@@ -168,6 +169,7 @@ const App = () => {
             <button className="button register">Register</button>
           </div>
         )}
+        <Register />
       </ReactMapGL>
     </div>
   );
