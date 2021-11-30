@@ -7,7 +7,6 @@ import axios from "axios";
 import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Header from "./components/Header";
 
 const App = () => {
   const myStorage = window.localStorage;
@@ -82,7 +81,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
